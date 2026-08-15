@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>SIHWEAR | Fashion Store</title>
-  <meta name="description" content="SIHWEAR - Modern fashion for everyone. Discover stylish clothing and accessories.">
+  <title>SIHWAR — Download App</title>
+
+  <meta name="description" content="Download SIHWAR App and get started today.">
 
   <style>
     * {
@@ -20,330 +21,323 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #fff;
-      color: #111;
+      background: #080808;
+      color: #ffffff;
+      min-height: 100vh;
     }
 
-    /* NAVBAR */
+    /* HEADER */
+
     header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,0.96);
-      border-bottom: 1px solid #eee;
-    }
-
-    nav {
-      max-width: 1200px;
-      margin: auto;
-      height: 70px;
-      padding: 0 20px;
+      width: 100%;
+      padding: 22px 7%;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
     }
 
     .logo {
       font-size: 28px;
       font-weight: 900;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
-
-    .nav-links a {
+    .header-btn {
       text-decoration: none;
-      color: #111;
-      font-size: 15px;
-      font-weight: 600;
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.35);
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-size: 14px;
+      transition: 0.3s;
     }
 
-    .nav-links a:hover {
-      color: #777;
-    }
-
-    .cart {
-      border: 1px solid #111;
-      padding: 9px 14px;
-      border-radius: 25px;
-      cursor: pointer;
-      background: #111;
-      color: white;
+    .header-btn:hover {
+      background: #ffffff;
+      color: #000000;
     }
 
     /* HERO */
+
     .hero {
-      min-height: 650px;
+      min-height: 100vh;
       display: flex;
       align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 20px 70px;
+
       background:
-        linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.15)),
-        url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1800&q=85")
-        center/cover;
+        radial-gradient(circle at 50% 25%, #333333 0%, #111111 35%, #080808 70%);
     }
 
     .hero-content {
-      max-width: 1200px;
-      width: 100%;
-      margin: auto;
-      padding: 60px 20px;
-      color: white;
+      max-width: 850px;
     }
 
-    .hero small {
-      letter-spacing: 4px;
-      font-weight: bold;
+    .app-icon {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 28px;
+
+      border-radius: 28px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #ffffff;
+      color: #080808;
+
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: 2px;
+
+      box-shadow:
+        0 20px 60px rgba(255,255,255,0.12);
     }
 
-    .hero h1 {
-      font-size: clamp(50px, 8vw, 95px);
-      line-height: .95;
-      margin: 20px 0;
-      max-width: 700px;
-    }
-
-    .hero p {
-      max-width: 500px;
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 30px;
-    }
-
-    .btn {
+    .tag {
       display: inline-block;
-      text-decoration: none;
-      background: white;
-      color: #111;
-      padding: 15px 28px;
+      padding: 8px 16px;
+      border: 1px solid rgba(255,255,255,0.25);
       border-radius: 30px;
-      font-weight: bold;
-      transition: .3s;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 22px;
+      color: #dddddd;
     }
 
-    .btn:hover {
-      transform: translateY(-3px);
-      background: #eee;
+    h1 {
+      font-size: clamp(55px, 10vw, 110px);
+      line-height: 0.9;
+      letter-spacing: -4px;
+      margin-bottom: 28px;
     }
 
-    /* SECTION */
-    section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 90px 20px;
+    .hero-text {
+      max-width: 600px;
+      margin: 0 auto 35px;
+      color: #bdbdbd;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    /* DOWNLOAD BUTTON */
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+
+      text-decoration: none;
+
+      background: #ffffff;
+      color: #000000;
+
+      padding: 17px 32px;
+      border-radius: 50px;
+
+      font-size: 17px;
+      font-weight: 800;
+
+      transition: 0.3s;
+
+      box-shadow: 0 15px 40px rgba(255,255,255,0.12);
+    }
+
+    .download-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(255,255,255,0.2);
+    }
+
+    .download-btn:active {
+      transform: scale(0.97);
+    }
+
+    .download-note {
+      margin-top: 16px;
+      color: #777777;
+      font-size: 12px;
+    }
+
+    /* FEATURES */
+
+    .features {
+      padding: 90px 7%;
+      background: #ffffff;
+      color: #080808;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 45px;
+      max-width: 650px;
+      margin: 0 auto 50px;
     }
 
     .section-title h2 {
-      font-size: 42px;
-      margin-bottom: 10px;
+      font-size: clamp(35px, 5vw, 55px);
+      margin-bottom: 14px;
     }
 
     .section-title p {
-      color: #666;
+      color: #666666;
+      line-height: 1.7;
     }
 
-    /* PRODUCTS */
-    .products {
+    .feature-grid {
+      max-width: 1100px;
+      margin: auto;
+
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 22px;
     }
 
-    .product {
-      background: #f6f6f6;
-      border-radius: 14px;
-      overflow: hidden;
-      transition: .3s;
+    .feature {
+      padding: 30px;
+      background: #f5f5f5;
+      border-radius: 24px;
+      transition: 0.3s;
     }
 
-    .product:hover {
+    .feature:hover {
       transform: translateY(-6px);
     }
 
-    .product img {
-      width: 100%;
-      height: 330px;
-      object-fit: cover;
-      display: block;
+    .feature-icon {
+      font-size: 34px;
+      margin-bottom: 18px;
     }
 
-    .product-info {
-      background: white;
-      padding: 18px;
+    .feature h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
     }
 
-    .product-info h3 {
-      margin-bottom: 8px;
-    }
-
-    .price {
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
-
-    .buy-btn {
-      width: 100%;
-      border: none;
-      background: #111;
-      color: white;
-      padding: 12px;
-      border-radius: 7px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .buy-btn:hover {
-      background: #333;
+    .feature p {
+      color: #666666;
+      line-height: 1.6;
+      font-size: 14px;
     }
 
     /* ABOUT */
+
     .about {
-      background: #111;
-      color: white;
-      max-width: none;
+      padding: 100px 7%;
+      background: #111111;
+      text-align: center;
     }
 
     .about-inner {
-      max-width: 1200px;
+      max-width: 800px;
       margin: auto;
-      padding: 90px 20px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
     }
 
     .about h2 {
-      font-size: 50px;
+      font-size: clamp(38px, 6vw, 65px);
       margin-bottom: 20px;
     }
 
     .about p {
-      color: #ccc;
+      color: #aaaaaa;
       line-height: 1.8;
-      font-size: 17px;
+      font-size: 16px;
     }
 
-    .about img {
-      width: 100%;
-      border-radius: 15px;
-      height: 450px;
-      object-fit: cover;
+    .about-btn {
+      display: inline-block;
+      margin-top: 28px;
+
+      text-decoration: none;
+
+      color: #ffffff;
+      border: 1px solid #555555;
+
+      padding: 13px 24px;
+      border-radius: 30px;
+
+      transition: 0.3s;
     }
 
-    /* NEWSLETTER */
-    .newsletter {
-      text-align: center;
-      background: #f5f5f5;
-      max-width: none;
-    }
-
-    .newsletter h2 {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
-
-    .newsletter p {
-      color: #666;
-      margin-bottom: 25px;
-    }
-
-    .newsletter form {
-      display: flex;
-      max-width: 550px;
-      margin: auto;
-    }
-
-    .newsletter input {
-      flex: 1;
-      padding: 15px;
-      border: 1px solid #ccc;
-      border-radius: 30px 0 0 30px;
-      outline: none;
-    }
-
-    .newsletter button {
-      padding: 15px 25px;
-      border: none;
-      background: #111;
-      color: white;
-      border-radius: 0 30px 30px 0;
-      cursor: pointer;
+    .about-btn:hover {
+      background: #ffffff;
+      color: #000000;
     }
 
     /* FOOTER */
+
     footer {
+      padding: 35px 20px;
       background: #050505;
-      color: white;
       text-align: center;
-      padding: 40px 20px;
+      color: #777777;
+      font-size: 13px;
     }
 
-    footer .logo {
-      margin-bottom: 15px;
-    }
-
-    footer p {
-      color: #aaa;
-      margin: 8px;
+    footer strong {
+      color: #ffffff;
+      letter-spacing: 2px;
     }
 
     /* MOBILE */
-    @media (max-width: 900px) {
-      .products {
-        grid-template-columns: repeat(2, 1fr);
-      }
 
-      .about-inner {
-        grid-template-columns: 1fr;
-      }
-    }
+    @media (max-width: 700px) {
 
-    @media (max-width: 650px) {
-      nav {
-        height: 60px;
+      header {
+        padding: 18px 20px;
       }
 
       .logo {
-        font-size: 23px;
+        font-size: 22px;
       }
 
-      .nav-links {
-        display: none;
+      .header-btn {
+        padding: 8px 13px;
+        font-size: 12px;
       }
 
       .hero {
-        min-height: 600px;
+        padding-left: 18px;
+        padding-right: 18px;
       }
 
-      .products {
+      .app-icon {
+        width: 95px;
+        height: 95px;
+        border-radius: 23px;
+        font-size: 27px;
+      }
+
+      h1 {
+        font-size: 65px;
+        letter-spacing: -3px;
+      }
+
+      .hero-text {
+        font-size: 15px;
+      }
+
+      .download-btn {
+        width: 100%;
+        max-width: 330px;
+      }
+
+      .feature-grid {
         grid-template-columns: 1fr;
       }
 
-      .product img {
-        height: 400px;
+      .features {
+        padding: 70px 20px;
       }
 
-      .about h2 {
-        font-size: 38px;
-      }
-
-      .newsletter form {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .newsletter input,
-      .newsletter button {
-        border-radius: 30px;
+      .about {
+        padding: 75px 20px;
       }
     }
   </style>
@@ -351,166 +345,188 @@
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- HEADER -->
+
   <header>
-    <nav>
-      <div class="logo">SIHWEAR</div>
 
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <div class="logo">
+      SIHWAR
+    </div>
 
-      <button class="cart" onclick="showCart()">🛒 Cart <span id="cartCount">0</span></button>
-    </nav>
+    <a
+      class="header-btn"
+      href="https://app.jotform.com/262252283254454"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      OPEN APP
+    </a>
+
   </header>
 
+
   <!-- HERO -->
-  <div class="hero" id="home">
-    <div class="hero-content">
-      <small>NEW COLLECTION 2026</small>
 
-      <h1>WEAR YOUR STYLE.</h1>
+  <main>
 
-      <p>
-        Discover modern fashion designed for confidence,
-        comfort and everyday style.
-      </p>
+    <section class="hero">
 
-      <a href="#shop" class="btn">SHOP NOW →</a>
-    </div>
-  </div>
+      <div class="hero-content">
 
-  <!-- SHOP -->
-  <section id="shop">
-
-    <div class="section-title">
-      <h2>Featured Collection</h2>
-      <p>Explore our latest fashion collection.</p>
-    </div>
-
-    <div class="products">
-
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80" alt="Classic T-Shirt">
-        <div class="product-info">
-          <h3>Classic T-Shirt</h3>
-          <div class="price">৳ 799</div>
-          <button class="buy-btn" onclick="addToCart('Classic T-Shirt')">
-            Add to Cart
-          </button>
+        <div class="app-icon">
+          SIH
         </div>
+
+        <div class="tag">
+          OFFICIAL APP
+        </div>
+
+        <h1>
+          SIHWAR
+        </h1>
+
+        <p class="hero-text">
+          Your SIHWAR experience, now in one place.
+          Open the app and get started instantly.
+        </p>
+
+        <a
+          class="download-btn"
+          href="https://app.jotform.com/262252283254454"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>↓</span>
+          DOWNLOAD APP
+        </a>
+
+        <div class="download-note">
+          Tap the button to open the SIHWAR app
+        </div>
+
       </div>
 
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=80" alt="Denim Jeans">
-        <div class="product-info">
-          <h3>Denim Jeans</h3>
-          <div class="price">৳ 1,499</div>
-          <button class="buy-btn" onclick="addToCart('Denim Jeans')">
-            Add to Cart
-          </button>
-        </div>
-      </div>
+    </section>
 
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=80" alt="Fashion Jacket">
-        <div class="product-info">
-          <h3>Urban Jacket</h3>
-          <div class="price">৳ 2,199</div>
-          <button class="buy-btn" onclick="addToCart('Urban Jacket')">
-            Add to Cart
-          </button>
-        </div>
-      </div>
 
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=900&q=80" alt="Hoodie">
-        <div class="product-info">
-          <h3>Premium Hoodie</h3>
-          <div class="price">৳ 1,299</div>
-          <button class="buy-btn" onclick="addToCart('Premium Hoodie')">
-            Add to Cart
-          </button>
-        </div>
-      </div>
+    <!-- FEATURES -->
 
-    </div>
-  </section>
+    <section class="features">
 
-  <!-- ABOUT -->
-  <div class="about" id="about">
-    <div class="about-inner">
+      <div class="section-title">
 
-      <div>
-        <h2>FASHION<br>WITHOUT LIMITS.</h2>
+        <h2>
+          Everything in one place.
+        </h2>
 
         <p>
-          SIHWEAR is a modern fashion brand focused on
-          simple design, quality and everyday confidence.
-          Our goal is to make stylish fashion accessible
-          to everyone.
+          Access SIHWAR quickly and easily from your phone.
         </p>
+
       </div>
 
-      <img
-        src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85"
-        alt="SIHWEAR Fashion">
-    </div>
-  </div>
 
-  <!-- NEWSLETTER -->
-  <section class="newsletter" id="contact">
+      <div class="feature-grid">
 
-    <h2>JOIN SIHWEAR</h2>
+        <div class="feature">
 
-    <p>
-      Subscribe to get new collection updates and special offers.
-    </p>
+          <div class="feature-icon">
+            ⚡
+          </div>
 
-    <form onsubmit="subscribe(event)">
-      <input type="email" placeholder="Enter your email" required>
-      <button type="submit">SUBSCRIBE</button>
-    </form>
+          <h3>
+            Quick Access
+          </h3>
 
-  </section>
+          <p>
+            Open SIHWAR quickly from your mobile device
+            and get started without unnecessary steps.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="feature-icon">
+            📱
+          </div>
+
+          <h3>
+            Mobile Friendly
+          </h3>
+
+          <p>
+            Designed to work comfortably on smartphones,
+            tablets and desktop screens.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="feature-icon">
+            ✨
+          </div>
+
+          <h3>
+            Simple Experience
+          </h3>
+
+          <p>
+            A clean and simple way to access your
+            SIHWAR app whenever you need it.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about">
+
+      <div class="about-inner">
+
+        <h2>
+          Welcome to SIHWAR.
+        </h2>
+
+        <p>
+          SIHWAR is built to give you a simple,
+          modern and convenient digital experience.
+          Open the app and explore everything SIHWAR has to offer.
+        </p>
+
+        <a
+          class="about-btn"
+          href="https://app.jotform.com/262252283254454"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          OPEN SIHWAR
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
 
   <!-- FOOTER -->
+
   <footer>
 
-    <div class="logo">SIHWEAR</div>
-
-    <p>Modern fashion. Your style. Your identity.</p>
-
-    <p>© 2026 SIHWEAR. All Rights Reserved.</p>
+    <p>
+      © 2026 <strong>SIHWAR</strong>. All rights reserved.
+    </p>
 
   </footer>
-
-  <script>
-    let cartCount = 0;
-
-    function addToCart(productName) {
-      cartCount++;
-      document.getElementById("cartCount").textContent = cartCount;
-
-      alert(productName + " added to your cart!");
-    }
-
-    function showCart() {
-      if (cartCount === 0) {
-        alert("Your cart is empty.");
-      } else {
-        alert("You have " + cartCount + " item(s) in your cart.");
-      }
-    }
-
-    function subscribe(event) {
-      event.preventDefault();
-      alert("Thank you for joining SIHWEAR!");
-    }
-  </script>
 
 </body>
 </html>
